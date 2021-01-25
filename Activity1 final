@@ -1,0 +1,7 @@
+income = input() #to take salary as input
+S = 300001
+R = 32
+A = 60400
+def calculate_tax(income): #defining a function calculated_tax
+    return ((int(income) - S)*R/100) +A
+print(calculate_tax(income))
