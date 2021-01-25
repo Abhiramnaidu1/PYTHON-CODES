@@ -1,0 +1,11 @@
+income = 350000
+S = 300001
+R = 32
+A = 60400
+
+def tax():
+    var1 = income - S
+    var2 = R / 100
+    return (var1 * var2) + A
+
+print(tax())
