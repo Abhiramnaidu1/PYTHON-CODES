@@ -1,0 +1,9 @@
+breakfast = ['apple', 'egg', 'ham', 'donut', 'bagles','sasuage']
+#BF_filter is to filter individual breakfast BF with string length greater than 3
+BF_filter = filter(lambda BF:True if len(BF) > 3 else False,breakfast)
+#BF_list is an empty list
+BF_list=[]
+for BF in BF_filter:
+#used append to add values to empty list BF_list
+    BF_list.append(BF)
+print(BF_list)
