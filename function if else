@@ -1,0 +1,8 @@
+weekday=input('what day?')
+vacation=input('vacation')
+def sleep_in(weekday, vacation):
+    if weekday in ['monday','tuesday','wednesday','thursday','friday' ] or vacation in 'yes':
+       return True
+    else:
+        return False
+print(sleep_in(weekday, vacation))
