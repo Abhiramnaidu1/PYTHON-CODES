@@ -1,9 +1,9 @@
 from pandas import Series
 import numpy as np
 data = Series(np.random.randint(1,high=50,size=10), index=(range(1,11))) # creating a random list of 10 with integers from 1 to 50
-data.name="Random numbers"
-data.index.name="idx"
-square = data ** 2
+data.name="Random numbers" # naming series as Random numbers
+data.index.name="idx" # naming index as idx
+square = data ** 2 # squaring all numbers in series
 print(square) # to show all squares in series
 print(square[::2]) # To show squares of odd indexes
 print(square[square <400].values) # To show square values less than 400
