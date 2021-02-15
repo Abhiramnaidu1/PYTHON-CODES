@@ -1,0 +1,5 @@
+import pandas as pd
+data = pd.read_csv('https://www.cs.odu.edu/~sampath/courses/data/values.csv')
+print(round(data['factor_1'].mean(),2))# to display mean of factor_1 column
+print(round(data['factor_1'].std(),2))# to display standard deviation of factor_1 column
+print(data.iloc[[4, 2, 5], [2,1]])# to display the row indexes 4, 2, 5 and columns factor_1 and price using iloc
