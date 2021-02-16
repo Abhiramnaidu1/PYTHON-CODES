@@ -1,0 +1,8 @@
+from pandas import DataFrame
+import numpy as np
+import pandas as pd
+matrix = np.random.randint(1,100, (3,5)) # creating a 3x5 matrix
+data = pd.DataFrame(matrix,index=['a','b','c'], columns=range(1,6)) # creating dataframe with index and columns
+print(data.T) # display transpose of dataframe
+data[data<40]=0# making values less than 40 as 0
+print(data.T) # printing new dataframe
