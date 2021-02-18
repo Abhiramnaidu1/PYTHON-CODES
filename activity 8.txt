@@ -1,0 +1,8 @@
+import math as ma
+import numpy as np
+import pandas as pd
+matrix = np.random.randint(1,100, (3,5)) # creating a 3x5 matrix
+data = pd.DataFrame(matrix,index=['a','b','c'], columns=range(1,6)) # creating dataframe with index and columns
+squareroot= data.applymap(lambda x: round(ma.sqrt(x),2)) # to squareroot all the values in dataframe
+print(squareroot)# to display dataframe with squareroot value
+print(squareroot.apply(sum,axis=1)) # to display sum of rows
