@@ -1,0 +1,16 @@
+from pandas import DataFrame
+import seaborn as sns
+import pandas as pd
+data = pd.read_csv("https://www.cs.odu.edu/~sampath/courses/data/brfss.csv")
+print(data) #initial extracted data
+def cleanBRFSSFrame(data):
+    data = data.drop("sex", axis=1)
+    data = data.dropna()
+    return data
+print(cleanBRFSSFrame(data)) # Data after cleaning
+print(round(cleanBRFSSFrame(data)['weight2'].describe(),3)) # display count, mean, maximum, minimum, standard deviation and percentiles
+print("25 percentile of age is :",cleanBRFSSFrame(data)['age'].quantile(.25))# dispaly 25% percentile
+print("50 percentile of age is :",cleanBRFSSFrame(data)['age'].quantile(.5))# dispaly 50% percentile
+print("75 percentile of age is :",cleanBRFSSFrame(data)['age'].quantile(.75))# dispaly 75% percentile
+sns.violinplot(data= cleanBRFSSFrame(data)['htm3']) #display violonplot of height
+
