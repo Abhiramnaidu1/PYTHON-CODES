@@ -1,0 +1,11 @@
+from pandas import DataFrame
+import seaborn as sns
+import pandas as pd
+data = pd.read_csv("https://www.cs.odu.edu/~sampath/courses/data/brfss.csv")
+data = data.drop("sex", axis=1) # dropping sex column from dataframe
+print(data) # Data after cleaning
+def minmax(x) : #Using the min-max algorithm to re-scale the data
+   return (x - x.min())/(x.max() - x.min())
+data = df.apply(minmax) # applying above defined algorithm
+data.boxplot() #display boxplot for all colums
+
