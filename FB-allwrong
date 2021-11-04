@@ -1,0 +1,13 @@
+# Write any import statements here
+
+def getWrongAnswers(N: int, C: str) -> str:
+  # Write your code here
+  C_list = list(C)
+  wrong=''
+  for i in range(1,N+1):
+    if C_list[i-1] == 'A':
+      wrong+='B'
+    else:
+      wrong+='A'
+  return wrong
+   
