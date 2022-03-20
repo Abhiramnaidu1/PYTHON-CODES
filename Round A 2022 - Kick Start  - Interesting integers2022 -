@@ -1,0 +1,32 @@
+def intrest_integer( A,B):
+    count=0
+    for i in range(A,B+1):
+      if i<10:
+        count+=1
+      else:
+        num_list = list(str(i))
+        sum_num=0
+        mul_num=1
+        for j in num_list:
+          sum_num+=int(j)
+          mul_num=mul_num*int(j)
+        if mul_num%sum_num ==0 and (sum_num<=mul_num or mul_num ==0):
+          
+          count+=1
+    return count   
+
+def main():
+    case = int(input())
+    
+    
+    for i in range(case):
+        A,B=map(int,input().split())
+        
+        
+        sol=intrest_integer(A,B)
+        print('Case #'+str(i+1)+': '+str(sol))
+  
+  
+
+if __name__=="__main__":
+    main()
