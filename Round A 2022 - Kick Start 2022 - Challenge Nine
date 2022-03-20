@@ -1,0 +1,39 @@
+def nine_mul(num):
+    num_list=list(str(num))
+    list_sum=0
+    for i in num_list:
+      list_sum+=int(i)
+    if list_sum<9:
+      div=list_sum
+    else:
+      div=list_sum//9
+    div2=9-div
+    if div==0 :
+        num_list.append('9')
+    elif int(num_list[0])<(9-div):
+        if int(num_list[1])<=(9-div):
+            num_list.append(str(div2))
+        else:
+            new_list=[str(div2)]
+            num_list=new_list+num_list
+    else:
+        new_list=[str(div2)]
+        num_list=new_list+num_list
+    k=''.join(num_list)
+    return int(k)
+
+def main():
+    case = int(input())
+    
+    
+    for i in range(case):
+        I=input()
+        print(I)
+        sol=nine_mul(I)
+        print('Case #'+str(i+1)+': '+str(sol))
+  
+  
+
+if __name__=="__main__":
+    main()
+    
