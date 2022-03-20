@@ -1,0 +1,24 @@
+def speed_test(I,P):
+    I_list=list(I)
+    P_list=list(P)
+    diff= len(P_list)-len(I_list)
+    k,c=0,0
+    count=0
+    if len(I_list)>=len(P_list) and I!=P:
+        return 'impossible'
+    elif I_list[:]==P_list[:len(I_list)]:
+      
+      return diff
+
+    else:
+        while k<len(I_list):
+            if I_list[k]==P_list[c]:
+                k+=1
+                c=k  
+
+            else:
+                
+                count+=1
+                print(c,k)
+            c+=1
+        return count    
